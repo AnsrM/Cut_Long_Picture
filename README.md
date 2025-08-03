@@ -1,3 +1,73 @@
+# Long Image Slicer Tool
+
+A graphical user interface tool for slicing long images into multiple parts by clicking to set cutting lines with the mouse.
+
+## Features
+
+- 🖼️ Support for multiple image formats (JPG, PNG, BMP, GIF, TIFF, etc.)
+- 🖱️ Mouse click to set cutting line positions
+- 👀 Real-time cutting line preview (blue dashed preview, red solid cutting lines)
+- 📝 Cutting line list management (view, delete)
+- 💾 Automatic saving of sliced images
+- 🔄 Support for image scaling and scrolling view
+- 📐 **Window width fits image**: Horizontal display width perfectly fits image width, vertical height is fixed
+- 🖱️ **Mouse wheel support**: Vertical scrolling for long images, Shift+wheel for horizontal scrolling
+- 🎨 **Beautiful UI design**: Modern interface, icon buttons, card-style layout
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+1. Run the program:
+   ```bash
+   python cut_long_picture.py
+   ```
+
+2. Click the "📁 Select Image" button to choose a long image to slice
+
+3. Click on the image to set cutting line positions:
+   - Mouse movement shows blue dashed line preview
+   - Clicking adds red cutting lines
+   - Cutting line positions are displayed in the right panel
+   - Use mouse wheel to scroll vertically through long images
+   - Hold Shift+wheel for horizontal scrolling
+
+4. Manage cutting lines:
+   - Select cutting lines in the right panel and click "❌ Delete Selected" to remove
+   - Click "🗑️ Clear Cutting Lines" to remove all cutting lines
+
+5. Click "✂️ Slice and Save" button:
+   - Choose save directory
+   - The program will automatically slice the image according to cutting lines and save
+
+## Output Files
+
+Sliced images will be named in the following format:
+- `original_filename_slice_01.png`
+- `original_filename_slice_02.png`
+- ...
+
+## Interface Description
+
+- **Control Panel**: Contains buttons for selecting images, clearing cutting lines, slicing and saving
+- **Image Display Area**: Shows the image, supports scrolling view, clickable to set cutting lines
+- **Cutting Lines List**: Displays all cutting line positions, supports selection and deletion
+
+## Notes
+
+- Cutting lines are automatically sorted by y-coordinate
+- Duplicate cutting line positions are automatically deduplicated
+- Saved images are in PNG format to ensure quality
+- Supports scrolling view for extra-long images
+- Window width automatically adjusts according to image width (fits image width), height is fixed at 80% of screen height
+- Mouse wheel operations: Normal wheel for vertical scrolling, Shift+wheel for horizontal scrolling
+- Interface uses modern design, supports high DPI displays
+
+
 # 长图切割工具
 
 一个带有图形用户界面的长图切割工具，可以通过鼠标点击设置切割线，将长图切割成多个部分。
@@ -24,7 +94,7 @@ pip install -r requirements.txt
 
 1. 运行程序：
    ```bash
-   python 长图切割.py
+   python cut_long_picture.py
    ```
 
 2. 点击"选择图片"按钮，选择要切割的长图
